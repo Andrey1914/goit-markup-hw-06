@@ -41,6 +41,11 @@ a {
   text-decoration: none;
 }
 
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
 /* header */
 
 .header {
