@@ -370,6 +370,10 @@ span {
   color: rgba(117, 117, 117, 0.5);
 }
 
+textarea {
+  resize: none;
+}
+
 .checkbox {
   display: flex;
   flex-direction: row;
@@ -408,6 +412,7 @@ span {
   line-height: 30px;
   letter-spacing: 0.06em;
   color: #ffffff;
+  cursor: pointer;
 }
 
 /* experience */
@@ -656,6 +661,7 @@ span {
 }
 
 .box {
+  position: relative;
   display: flex;
 }
 
@@ -770,6 +776,55 @@ span {
 .tel-item {
   color: rgba(255, 255, 255, 0.6);
 }
+
+.subscription {
+  display: flex;
+  margin-left: 93px;
+  padding-top: 12px;
+}
+
+.subscription-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscription-form-label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.subscription-form-input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.btn-subscription {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  margin-left: 12px;
+  padding: 0;
+}
+
+.btn-subscription::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  border: 1px solid red;
+  background-image: url('../images/icons.svg#icon-send');
+  background-size: contain;
+}
+
+/* portfolio */
 
 .completed-work {
   display: none;
