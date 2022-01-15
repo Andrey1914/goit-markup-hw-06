@@ -179,7 +179,7 @@ span {
 
 .mail-icon,
 .phone-icon {
-  fill: #757575;
+  fill: var(--text-color);
   margin-right: 10px;
   cursor: pointer;
   transition: fill 250ms var(--timing-function);
@@ -239,7 +239,7 @@ span {
   line-height: 1.9;
   letter-spacing: 0.06em;
   color: #ffffff;
-  background: #2196f3;
+  background: var(--accent-color);
   border-radius: 4px;
   border: none;
   cursor: pointer;
@@ -295,6 +295,13 @@ span {
   width: 100%;
   height: 100%;
   cursor: pointer;
+  fill: var(--color-of-headers);
+  transition: fill 250ms var(--timing-function);
+}
+
+.btn-close:hover .close-icon,
+.btn-close:focus .close-icon {
+  fill: var(--accent-color);
 }
 
 .form {
@@ -313,10 +320,11 @@ span {
   letter-spacing: 0.03em;
   text-align: center;
   margin-bottom: 12px;
-  color: #212121;
+  color: var(--color-of-headers);
 }
 
 .form-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -325,9 +333,32 @@ span {
 .form-item input {
   height: 40px;
   margin: 0;
+  padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  cursor: pointer;
+  transition: border 250ms var(--timing-function);
+}
+
+.form-item input:hover,
+.form-item input:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.form-input-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  fill: #212121;
+  transition: fill 250ms var(--timing-function);
+}
+
+.form-item:hover .form-input-icon,
+.form-item:focus .form-input-icon {
+  fill: var(--accent-color);
 }
 
 .form-item label {
@@ -335,7 +366,8 @@ span {
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
-  color: #757575;
+  color: var(--text-color);
+  cursor: pointer;
 }
 
 .comment {
@@ -352,7 +384,8 @@ span {
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
-  color: #757575;
+  color: var(--text-color);
+  cursor: pointer;
 }
 
 .comment textarea {
@@ -361,6 +394,13 @@ span {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  cursor: pointer;
+  transition: border 250ms var(--timing-function);
+}
+
+.comment textarea:hover,
+.comment textarea:focus {
+  border: 1px solid var(--accent-color);
 }
 
 .comment textarea::placeholder {
@@ -375,6 +415,7 @@ textarea {
 }
 
 .checkbox {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -386,12 +427,45 @@ textarea {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.icon-checkbox {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+}
+
+.checkbox-input:checked + .icon-checkbox {
+  background-color: var(--accent-color);
+  border-color: transparent;
+  background-image: url('../images/icon-check.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.checkbox-input:focus ~ .icon-checkbox {
+  box-shadow: var(--accent-color);
+}
+
+.checkbox input {
+  appearance: none;
+  /* visibility: hidden; */
+}
+
+.checkbox label {
+  cursor: pointer;
+  transition: 250ms var(--timing-function);
 }
 
 .agree {
   text-decoration-line: underline;
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .btn-send {
@@ -403,7 +477,7 @@ textarea {
   height: 50px;
   margin-left: auto;
   margin-right: auto;
-  background: #2196f3;
+  background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
@@ -592,7 +666,8 @@ textarea {
 }
 
 .links:hover,
-.links:focus .social-link-icon:hover,
+.links:focus,
+.social-link-icon:hover,
 .social-link-icon:focus {
   background-color: var(--accent-color);
 }
@@ -804,6 +879,14 @@ textarea {
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+  background-color: var(--footer-color);
+}
+
+.subscription-form-input::placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .btn-subscription {
@@ -819,8 +902,7 @@ textarea {
   width: 24px;
   height: 24px;
   margin-left: 10px;
-  border: 1px solid red;
-  background-image: url('../images/icons.svg#icon-send');
+  background-image: url('../images/icon-send.svg');
   background-size: contain;
 }
 
