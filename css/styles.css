@@ -243,6 +243,12 @@ span {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  transition: background-color 250ms var(--timing-function);
+}
+
+.btn-hero:hover,
+.btn-hero:hover {
+  background-color: #188ce8;
 }
 
 .backdrop {
@@ -487,6 +493,12 @@ textarea {
   letter-spacing: 0.06em;
   color: #ffffff;
   cursor: pointer;
+  transition: background-color 250ms var(--timing-function);
+}
+
+.btn-send:hover,
+.btn-send:focus {
+  background-color: #188ce8;
 }
 
 /* experience */
