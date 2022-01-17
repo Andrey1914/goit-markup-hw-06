@@ -362,8 +362,8 @@ span {
   transition: fill 250ms var(--timing-function);
 }
 
-.form-item:hover .form-input-icon,
-.form-item:focus .form-input-icon {
+.form-input:hover + .form-input-icon,
+.form-input:focus + .form-input-icon {
   fill: var(--accent-color);
 }
 
