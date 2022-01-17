@@ -443,20 +443,16 @@ textarea {
   height: 15px;
   border: 2px solid #212121;
   border-radius: 2px;
+  transition: background 250ms var(--timing-function);
 }
 
 .checkbox-input:checked + .icon-checkbox {
   background-color: var(--accent-color);
   border-color: transparent;
-  background-image: url('../images/icon-check.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-origin: border-box;
 }
 
-.checkbox-input:focus ~ .icon-checkbox {
-  box-shadow: var(--accent-color);
+.icon-checkbox:focus {
+  border: 2px solid var(--accent-color);
 }
 
 .checkbox input {
@@ -909,13 +905,10 @@ textarea {
   padding: 0;
 }
 
-.btn-subscription::after {
-  content: '';
+.btn-icon-send {
   width: 24px;
   height: 24px;
   margin-left: 10px;
-  background-image: url('../images/icon-send.svg');
-  background-size: contain;
 }
 
 /* portfolio */
