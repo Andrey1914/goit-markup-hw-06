@@ -674,9 +674,7 @@ textarea {
 }
 
 .links:hover,
-.links:focus,
-.social-link-icon:hover,
-.social-link-icon:focus {
+.links:focus {
   background-color: var(--accent-color);
 }
 
