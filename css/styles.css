@@ -41,6 +41,11 @@ a {
   text-decoration: none;
 }
 
+:focus {
+  outline: 4px solid rgba(33, 150, 243, 0.5);
+  border-radius: 3px;
+}
+
 /* label {
   display: block;
   margin-bottom: 4px;
@@ -277,6 +282,7 @@ span {
   top: 50%;
   width: 528px;
   height: 581px;
+  padding: 40px;
   background: #ffffff;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -308,15 +314,6 @@ span {
 .btn-close:hover .close-icon,
 .btn-close:focus .close-icon {
   fill: var(--accent-color);
-}
-
-.form {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 528px;
-  height: 581px;
-  padding: 40px;
 }
 
 .form-title {
@@ -429,7 +426,6 @@ textarea {
   width: 425px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
@@ -479,6 +475,7 @@ textarea {
   height: 50px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -886,6 +883,7 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: var(--footer-color);
+  color: #ffffff;
 }
 
 .subscription-form-input::placeholder {
@@ -901,6 +899,7 @@ textarea {
   right: 0;
   margin-left: 12px;
   padding: 0;
+  margin-top: 0;
 }
 
 .btn-icon-send {
