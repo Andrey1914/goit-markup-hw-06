@@ -341,6 +341,7 @@ span {
   box-sizing: border-box;
   border-radius: 4px;
   cursor: pointer;
+  outline: none;
   transition: border 250ms var(--timing-function);
 }
 
@@ -398,6 +399,7 @@ span {
   box-sizing: border-box;
   border-radius: 4px;
   cursor: pointer;
+  outline: none;
   transition: border 250ms var(--timing-function);
 }
 
